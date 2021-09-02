@@ -3,11 +3,23 @@ using System.Collections.Generic;
 
 public class SetModel
 {
-	public int Reps { get; set; }
-	public int Weight { get; set; }
+	public int RepGoal { get; set; }
+	public int ActualReps { get; set; }
+	public int WeightGoal { get; set; }
+	public int MaxWeight { get; set; }
 
 	public SetModel(int reps)
 	{
-		Reps = reps;
+		RepGoal = reps;
+	}
+
+	public void SetWeight(int weight)
+	{
+		WeightGoal = weight;
+
+		if (WeightGoal > MaxWeight)
+		{
+			MaxWeight = WeightGoal;
+		}
 	}
 }

@@ -14,7 +14,7 @@ public class RoutineModel
 	public void AddNewLift(string name, int numOfSets, int numOfReps)
 	{
 		LiftModel newLift = new LiftModel(name, numOfSets, numOfReps);
-		
+
 		Lifts.Add(newLift);
 	}
 }
